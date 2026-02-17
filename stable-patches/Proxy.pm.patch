@@ -1,0 +1,15 @@
+diff --git a/util/perl/TLSProxy/Proxy.pm b/util/perl/TLSProxy/Proxy.pm
+index ccc4814..602a1a6 100644
+--- a/util/perl/TLSProxy/Proxy.pm
++++ b/util/perl/TLSProxy/Proxy.pm
+@@ -130,8 +130,8 @@ sub init
+     # find a port thats available.
+     my $test_client_addr = $have_IPv6 ? "[::1]" : "127.0.0.1";
+     my $found_port = 0;
+-    for (my $i = 0; $i <= 10; $i++) {
+-        $test_client_port = 49152 + int(rand(65535 - 49152));
++    for (my $i = 0; $i <= 100; $i++) {
++        $test_client_port = 10000 + int(rand(65535 - 10000));
+         my $test_sock;
+         if ($useINET6 == 0) {
+             if ($useSockInet == 0) {
